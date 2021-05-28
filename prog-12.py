@@ -7,7 +7,7 @@ def no_of_divisors(n):
         n /= 2
         occurance += 1
     nod*=occurance+1
-    for i in range(3,int(n)//2 + 1):
+    for i in range(3,int(n)//2 + 1,2):
         if n % i == 0:
             occurance = 0
             while n % i == 0 :
