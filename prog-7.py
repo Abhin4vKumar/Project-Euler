@@ -2,16 +2,17 @@
 # we can see that the 6th prime is 13.
 
 # What is the 10 001st prime number?
+import math
 def check_prime_for_odd(n):
-    if n ==2 or n ==3:
-        return True
-    elif n < 2:
+    if n == 1:
         return False
-    for i in range(3,n//2 + 1):
-        if n%i ==0:
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        if n % i == 0:
             return False
     return True
 def function():
+    # even numbers are skipped so 2 is also skipped which is the only even prime no
+    #hence count should be = 1
     count = 1
     i = 1
     while count < 10001:
